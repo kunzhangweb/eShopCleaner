@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
 
-const API_URL = "http://localhost:3000/api/user/";
+const API_URL = "https://eshop-cleaner-api.onrender.com/api/user/";
 
 @Injectable({
   providedIn: "root",
