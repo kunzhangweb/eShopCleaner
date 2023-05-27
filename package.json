@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --openssl-legacy-provider",
-    // --no-experimental-fetch
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
