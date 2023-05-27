@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: "app-contact",
   templateUrl: "./contact.component.html",
-  styleUrls: ["./contact.component.css"]
+  styleUrls: ["./contact.component.css"],
 })
 export class ContactComponent implements OnInit {
   mail = {
@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
     text: "",
     name: "",
     tel: "",
-    sendtype: ""
+    sendtype: "",
   };
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -25,8 +25,8 @@ export class ContactComponent implements OnInit {
   sendMail() {
     console.log(this.mail);
     this.http
-      .post("http://localhost:3000/api/email", this.mail)
-      .subscribe(res => {
+      .post("https://eshop-cleaner-api.onrender.com/api/email", this.mail)
+      .subscribe((res) => {
         console.log(res);
       });
   }
