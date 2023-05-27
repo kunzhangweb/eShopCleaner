@@ -6,7 +6,7 @@ import { ToastrService } from "ngx-toastr";
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.css"]
+  styleUrls: ["./login.component.css"],
 })
 export class LoginComponent {
   public model: any = {};
@@ -21,10 +21,10 @@ export class LoginComponent {
 
   login() {
     this.user.login(this.model).subscribe(
-      data => {
+      (data) => {
         //check the response message
         if (data["message"] === "Auth Successful") {
-          console.log("data:", data);
+          // console.log("data:", data);
           this.toastr.success(data["message"], "Success");
           localStorage.setItem("user_type", data["user_type"]);
           localStorage.setItem("token", data["token"]);
@@ -32,7 +32,7 @@ export class LoginComponent {
           this.router.navigate(["/list"]);
         }
       },
-      error => {
+      (error) => {
         this.toastr.error(error.error.message, "Error");
       }
     );
