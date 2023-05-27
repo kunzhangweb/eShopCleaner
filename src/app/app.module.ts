@@ -12,7 +12,7 @@ import {
   MatToolbarModule,
   MatExpansionModule,
   MatRadioModule,
-  MatIconModule
+  MatIconModule,
 } from "@angular/material";
 import { MatBadgeModule } from "@angular/material/badge";
 
@@ -30,17 +30,17 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { CleanerAddComponent } from "./components/cleaner-add/cleaner-add.component";
 import { CleanerDetailComponent } from "./components/cleaner-detail/cleaner-detail.component";
 import { CleanerListComponent } from "./components/cleaner-list/cleaner-list.component";
-import { AdminSignupComponent } from './components/admin-signup/admin-signup.component';
-import { HeaderComponent } from './components/header/header.component';
+import { AdminSignupComponent } from "./components/admin-signup/admin-signup.component";
+import { HeaderComponent } from "./components/header/header.component";
 
-var config = {
-  apiKey: "AIzaSyADiXXXXXXXXXXXXXXHT-IY",
-  authDomain: "ionic-4-fireXXXXXXXXXXeapp.com",
-  databaseURL: "https://ionic-4-fireXXXXXXXXXXXXeio.com",
-  projectId: "ionic-4-fiXXXXXXXXXXXn",
-  storageBucket: "ionic-4-firXXXXXXXXXXXpot.com",
-  messagingSenderId: "9253XXXXXXX324"
-};
+// var config = {
+//   apiKey: "AIzaSyADiXXXXXXXXXXXXXXHT-IY",
+//   authDomain: "ionic-4-fireXXXXXXXXXXeapp.com",
+//   databaseURL: "https://ionic-4-fireXXXXXXXXXXXXeio.com",
+//   projectId: "ionic-4-fiXXXXXXXXXXXn",
+//   storageBucket: "ionic-4-firXXXXXXXXXXXpot.com",
+//   messagingSenderId: "9253XXXXXXX324"
+// };
 
 @NgModule({
   declarations: [
@@ -52,7 +52,7 @@ var config = {
     CleanerDetailComponent,
     CleanerListComponent,
     AdminSignupComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,10 +72,10 @@ var config = {
     MatRadioModule,
     FlexLayoutModule,
     MatSidenavModule,
-    AngularFireModule.initializeApp(config),
-    AngularFireAuthModule
+    // AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
